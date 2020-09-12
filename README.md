@@ -1,6 +1,10 @@
 # Traccar with MariaDB
 
-Ceate the (traccar)[https://www.traccar.org/] server with a standalone Maria DB database and Traefik reverse proxy via docker-compose file.
+Ceate the [Traccar](https://www.traccar.org/) GPS tracking server with a standalone Maria DB database and Traefik reverse proxy via docker-compose file.
+
+
+
+## Instructions
 
 Start up Traccar (`traccar`) and Maria DB (`traccar_db`) containers:
 
