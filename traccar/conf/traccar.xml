@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE properties SYSTEM 'http://java.sun.com/dtd/properties.dtd'>
+<properties>
+
+    <entry key='config.default'>./conf/default.xml</entry>
+
+    <!--
+
+    This is the main configuration file. All your configuration parameters should be placed in this file.
+
+    Default configuration parameters are located in the "default.xml" file. You should not modify it to avoid issues
+    with upgrading to a new version. Parameters in the main config file override values in the default file. Do not
+    remove "config.default" parameter from this file unless you know what you are doing.
+
+    For list of available parameters see following page: https://www.traccar.org/configuration-file/
+
+    -->
+
+    <!--
+
+        see: https://www.traccar.org/reverse-geocoding/
+
+    <entry key='geocoder.enable'>true</entry>
+    <entry key='geocoder.type'>google</entry>
+    <entry key='geocoder.key'>YOUR API KEY</entry>
+    -->
+
+    <!--
+        Gmail Configuration
+        see: https://www.traccar.org/gmail/
+    
+    <entry key='mail.smtp.port'>587</entry>
+    <entry key='mail.smtp.starttls.enable'>true</entry>
+    <entry key='mail.smtp.host'>smtp.gmail.com</entry>
+    <entry key='mail.smtp.from'>YourAddress@gmail.com</entry>
+    <entry key='mail.smtp.auth'>true</entry>
+    <entry key='mail.smtp.username'>YourAddress@gmail.com</entry>
+    <entry key='mail.smtp.password'>YourPassword</entry>
+    -->
+
+    <!-- 
+        HTTP SMS API
+        see: https://www.traccar.org/http-sms-api/
+
+    <entry key='notificator.types'>web,mail,sms</entry>
+    <entry key='notificator.sms.manager.class'>org.traccar.sms.HttpSmsClient</entry>
+    <entry key='sms.http.url'>http://IP_ADDRESS:8082/</entry>
+    <entry key='sms.http.authorization'>API_KEY</entry>
+    <entry key='sms.http.template'>
+        {
+            "to": "{phone}",
+            "message": "{message}"
+        }
+    </entry>
+    -->
+</properties>

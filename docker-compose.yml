@@ -1,0 +1,33 @@
+version: '3'
+services:
+  traccar:
+    image: traccar/traccar:latest
+    container_name: traccar
+    depends_on:
+      - traccar_db
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./traccar/conf/traccar.xml:/opt/traccar/conf/traccar.xml
+    ports:
+      - '8084:8082'
+      - '5055:5055' # i'm only using Android App, so I only need this port
+
+  traccar_db:
+    container_name: traccar_db
+    image: mariadb:latest
+    restart: unless-stopped
+    environment:
+       MYSQL_ROOT_PASSWORD: 55xMYXQNNq
+       MYSQL_DATABASE: traccar
+       MYSQL_USER: traccar
+       MYSQL_PASSWORD: m1vaumUXlP
+    volumes:
+       - ./mariadb/data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  traccar:
+  traccar_db:
