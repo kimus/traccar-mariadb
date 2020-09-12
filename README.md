@@ -28,11 +28,17 @@ docker-compose logs -f traccar
 Restart:
 
 ```bash
-docker-compose restart traccar
+docker-compose restart
 ```
+or you can just restart the `traccar` container:
+
+```bash
+docker-compose logs -f traccar
+```
+
 
 Shutdown:
 
 ```bash
-docker-compose restart traccar
+docker-compose down
 ```
